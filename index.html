@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f"><link rel="manifest" href="manifest.json">
+<title>JARVIS — Personal AI</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header><div class="orb">J</div><div><h1>J.A.R.V.I.S.</h1><p>PERSONAL ASSISTANT · ANDROID</p></div><button id="settingsBtn" class="iconbtn" aria-label="Settings">⚙</button></header>
+<section class="hero"><div class="rings"><div class="core">J</div></div><h2>At your service.</h2><p>Punjabi · हिंदी · English</p><button id="listen" class="primary">🎙️ Tap to speak</button><p id="status" class="hint">Ready. Mic only starts when you tap.</p></section>
+<section class="panel"><div class="panelhead"><h3>Conversation</h3><button id="clear" class="quiet">Clear</button></div><div id="chat" aria-live="polite"><div class="bubble bot">Sat Sri Akal! I’m your JARVIS assistant. Set up a free AI key in ⚙ Settings to enable AI chat. Quick commands work without a key.</div></div><form id="form"><input id="message" autocomplete="off" placeholder="Type or speak to JARVIS…" aria-label="Message"><button class="send" type="submit">➤</button></form></section>
+<section class="shortcuts"><h3>Quick controls</h3><div class="tiles">
+<button data-cmd="open YouTube">▶️<span>YouTube</span></button><button data-cmd="open WhatsApp">💬<span>WhatsApp</span></button><button data-cmd="open Camera">📷<span>Camera</span></button><button data-cmd="search Google">🔎<span>Google</span></button><button data-cmd="open Maps">🗺️<span>Maps</span></button><button data-cmd="open Gmail">✉️<span>Gmail</span></button><button data-cmd="open Settings">⚙️<span>Settings</span></button><button data-cmd="what time is it">🕒<span>Time</span></button>
+</div></section>
+<footer>Free starter · AI requires your own free API key · No always-on listening</footer>
+</main>
+<dialog id="settings"><form method="dialog" id="settingsForm"><div class="panelhead"><h2>JARVIS Settings</h2><button class="quiet" value="close" aria-label="Close">✕</button></div>
+<p class="small">To enable AI chat, paste a Gemini API key you create yourself in Google AI Studio. Never share this key. This browser app stores it on this device; it is not a secure vault.</p>
+<label for="apiKey">Gemini API key</label><input id="apiKey" type="password" autocomplete="off" placeholder="Paste API key here">
+<label for="language">Reply language</label><select id="language"><option value="auto">Match my message</option><option value="Punjabi">Punjabi</option><option value="Hindi">Hindi</option><option value="English">English</option></select>
+<button id="saveSettings" class="primary" type="button">Save settings</button><button id="forgetKey" class="quiet" type="button">Remove saved key</button>
+<p class="small">API free-tier availability and limits are controlled by Google and may change. The API key is sent to Google to generate replies.</p></form></dialog>
+<script src="app.js"></script>
+</body></html>
